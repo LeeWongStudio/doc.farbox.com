@@ -8,8 +8,9 @@ $selected_color: $red_color;
 
 
 body {
-    font:  400 16px/1.62 'PT Sans', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, sans-serif;
-    -webkit-text-size-adjust: none;
+    /* font:  400 16px/1.62 'PT Sans', "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, Hiragino Sans GB, Microsoft YaHei, sans-serif;
+    -webkit-text-size-adjust: none; */
+    font-family: "Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Microsoft Yahei",sans-serif;
     word-wrap:break-word;
     font-size: 1em;
     color: #333;
@@ -209,8 +210,6 @@ h1, h2, h3{
 
 .content_body{
     padding: 2em 2.5em 3.5em 2.5em;
-    line-height: 2.5;
-
 
     h1{
         font-size: 2.2em;
