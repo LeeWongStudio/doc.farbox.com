@@ -1,4 +1,4 @@
-.content_body
+div(class='content_body',itemtype="http://schema.org/Article",itemscope)
     if request.args.s
         h1 Results
         posts = get_data(type='post', path=docs_path, keywords=request.args.s, sort='position', limit=50)
@@ -7,9 +7,9 @@
                 for post in posts
                     li
 						if request.args.lang
-                        	a(href='/read/{{post.url_path}}?lang={{request.args.lang}}')= post.title
+                        	a(href='/wiki/{{post.url_path}}?lang={{request.args.lang}}')= post.title
 						else
-							a(href='/read/{{post.url_path}}')= post.title
+							a(href='/wiki/{{post.url_path}}')= post.title
         else
             p Nothing Found
     elif request.path == '/'
@@ -23,8 +23,8 @@
             category_path = docs_path+path2
             post = get_doc(category_path)
         if post
-            h1.title= post.title
-			.doc_post= post.content.without_toc
+            h1(class="title",itemprop="name")= post.title
+			div(class="doc_post",itemprop="articleBody")= post.content.without_toc
 			include include/comments.jade
         else
             +raise_404()

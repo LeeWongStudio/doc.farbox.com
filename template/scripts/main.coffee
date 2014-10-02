@@ -11,7 +11,7 @@ $(document).ready ->
     cached_pages = {}
     $('#sidebar a').click ->
         url = this.href
-        title = this.text
+        title = this.text + " | " + site.title
         if url.indexOf('#') == -1
             selected_already = $(this).hasClass('selected')
             $('#sidebar .selected').removeClass('selected')

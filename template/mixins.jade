@@ -1,5 +1,5 @@
 mixin make_sidebar(docs_path)
-	read_prefix = '/read/'
+	read_prefix = '/wiki/'
 	#sidebar
 		index_posts = get_data(types='post+folder', path=docs_path, min_posts_count=1, level=1, sort='position', limit=100)
 		ul
